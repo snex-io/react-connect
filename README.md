@@ -13,7 +13,7 @@ yarn add @snex/react-connect
 
 * Require component.
 ```js
-import SNEXConnect from 'react-full-screen';
+import SNEXConnect from '@snex/react-connect';
 ```
 
 * Setup and render.
@@ -29,8 +29,8 @@ function handleControllerConnected(controller) {
   });
 }
 
-<SNEXConnect 
-  type='nes' 
+<SNEXConnect
+  type='nes'
   onConnection={controller => handleControllerConnected(controller)}
 />
 ```
