@@ -49,3 +49,16 @@ function handleControllerConnected(controller) {
 />
 ```
 
+## Props
+### `onConnection` *Function* (required)
+Function to call everytime a controller is connected. The function will have the connecting controller as argument. To listen for input from controller attach a listener to the `data` event.
+```jsx
+<SNEXConnect onConnection={controller => {
+    controller.on('data', data => {
+        console.log('Controller sent', data);
+    });
+}}/>
+```
+
+### `type` *String* (optional)
+Controller type to create URL for like `nes`, `snes`, or `genesis`. Default to `nes`. For a full list of controllers refer to the [SNEX Documentation](https://github.com/snex-io/snex-web/tree/master/docs).
