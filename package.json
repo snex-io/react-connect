@@ -1,7 +1,14 @@
 {
   "name": "@snex/react-connect",
+  "description": "Widget for connecting gamepads with SNEX for React.",
   "version": "0.0.1",
+  "homepage": "http://snex.io",
   "license": "ISC",
+  "author": "Pontus Alexander",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snex-io/react-connect.git"
+  },
   "scripts": {
     "autoformat": "prettier --trailing-comma es5 --write './src/**/*.{js,jsx}'",
     "build": "babel ./src/ --out-dir ./dist"
