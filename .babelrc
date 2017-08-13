@@ -4,6 +4,7 @@
     "react",
   ],
   "plugins": [
+    "inline-import-data-uri",
     "transform-react-jsx",
     "transform-class-properties",
   ],

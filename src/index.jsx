@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SNEX from "snex";
 
+import logo from "./logo.svg";
+import throbber from "./throbber.svg";
+
 const MILLIS = 1000;
 const GRACE = 30;
 
@@ -70,7 +73,7 @@ class SNEXConnect extends Component {
   }
 
   render() {
-    const { link } = this.state;
+    const { busy, link } = this.state;
     const url = link ? link.url : null;
 
     return (
@@ -87,16 +90,38 @@ class SNEXConnect extends Component {
           className="front"
           style={{
             backfaceVisibility: "hidden",
-            background: `url('https://cdn.snex.io/images/snex-logo.svg') center no-repeat`,
-            backgroundSize: "contain",
-            cursor: "pointer",
-            position: "absolute",
             height: "100%",
+            position: "relative",
             transform: "rotateX(0deg)",
             width: "100%",
           }}
-          onClick={() => this.activate()}
-        />
+        >
+          <div
+            className="logo"
+            style={{
+              background: `url(${logo}) center no-repeat`,
+              backgroundSize: "contain",
+              cursor: "pointer",
+              height: "100%",
+              opacity: busy ? 0.4 : 1,
+              position: "absolute",
+              transition: "opacity 0.3s ease",
+              width: "100%",
+            }}
+            onClick={() => this.activate()}
+          />
+          <div
+            className="throbber"
+            style={{
+              background: `url(${throbber}) center no-repeat`,
+              display: busy ? "block" : "none",
+              backgroundSize: "contain",
+              height: "100%",
+              position: "absolute",
+              width: "100%",
+            }}
+          />
+        </div>
 
         <div
           className="back"
@@ -108,6 +133,7 @@ class SNEXConnect extends Component {
             justifyContent: "center",
             position: "absolute",
             transform: "rotateX(180deg)",
+            top: 0,
             height: "100%",
             width: "100%",
           }}
