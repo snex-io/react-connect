@@ -4,7 +4,7 @@ A little widget for connecting gamepads with SNEX for React. When this widget ex
 
 The widget will keep track of link lifetime according to what the SNEX API reports. After the link expires the widget will go back to showing the SNEX logo and a new session can be requested by clicking again.
 
-<img src="http://imgur.com/G0XBL23.gif"/>
+![Widget Demo](http://i.imgur.com/WSnTxFt.gif "Widget demo")
 
 For more information on the controller API refer to the [SNEX Documentation](https://github.com/snex-io/snex-web/tree/master/docs).
 
