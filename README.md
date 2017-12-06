@@ -21,32 +21,26 @@ yarn add @snex/react-connect
 import SNEXConnect from '@snex/react-connect';
 ```
 
-* Define CSS for widget to give it a size at least.
-```css
-.snex-connect {
-    height: 80px;
-    width: 200px;
-}
-```
-The widget will inherit CSS properties like `color`, `font-size`, `font-family` etc.
-
-* Setup and render.
+* Render.
 ```jsx
-// A dummy input receiver.
-const myGame = new Game();
+class MyComponent extends React.Component {
+  handleConnection = (controller) => {
+    controller.on('data', data => {
+      if (data.state && data.key === 'A') {
+        this.props.game.hero.jump();
+      }
+    });
+  }
 
-function handleControllerConnected(controller) {
-  controller.on('data', data => {
-    if (data.state && data.key === 'A') {
-      myGame.hero.jump();
-    }
-  });
+  render() {
+    return <div>
+      <SNEXConnect
+        type='nes'
+        onConnection={this.handleConnection}
+      />
+    </div>;
+  }
 }
-
-<SNEXConnect
-  type='nes'
-  onConnection={controller => handleControllerConnected(controller)}
-/>
 ```
 
 ## Props
