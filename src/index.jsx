@@ -149,7 +149,7 @@ class SNEXConnect extends Component {
           }}
         >
           <div>
-            <small>Remote Control</small>
+            Remote Control
           </div>
           <div>
             <a href={url} target="_blank">
