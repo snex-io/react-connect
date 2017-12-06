@@ -1549,9 +1549,9 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
-snex@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/snex/-/snex-0.2.0.tgz#6b7184f3b73f6b911456e2e5b19406f885aad433"
+snex@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/snex/-/snex-0.3.0.tgz#b2814ba1d671c685a1a37feffb2e784351fc73bc"
 
 sntp@1.x.x:
   version "1.0.9"
