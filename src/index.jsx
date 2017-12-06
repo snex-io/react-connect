@@ -89,6 +89,7 @@ class SNEXConnect extends Component {
       <div
         className="snex-connect"
         style={{
+          height: "5em",
           position: "relative",
           transform: link ? "rotateX(180deg)" : "rotateX(0deg)",
           transformStyle: "preserve-3d",
