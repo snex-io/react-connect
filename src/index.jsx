@@ -45,6 +45,7 @@ class SNEXConnect extends Component {
       this.session = SNEX.createSession();
       this.session.then(session => {
         session.on("connection", this.props.onConnection);
+        session.on("disconnected", () => this.sleep());
       });
     }
 
@@ -70,6 +71,14 @@ class SNEXConnect extends Component {
           });
         }, timeout);
       });
+  }
+
+  sleep() {
+    this.session = null;
+    this.setState({
+      busy: false,
+      link: null,
+    });
   }
 
   render() {
