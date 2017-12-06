@@ -132,6 +132,7 @@ class SNEXConnect extends Component {
             flexFlow: "column",
             justifyContent: "center",
             position: "absolute",
+            textAlign: "center",
             transform: "rotateX(180deg)",
             top: 0,
             height: "100%",
