@@ -148,10 +148,10 @@ class SNEXConnect extends Component {
             width: "100%",
           }}
         >
-          <div>
+          <div className="caption">
             Remote Control
           </div>
-          <div>
+          <div className="link">
             <a href={url} target="_blank">
               {url}
             </a>
