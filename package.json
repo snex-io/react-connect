@@ -1,7 +1,7 @@
 {
   "name": "@snex/react-connect",
   "description": "Widget for connecting gamepads with SNEX for React.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "http://snex.io",
   "license": "ISC",
   "author": "Pontus Alexander",
