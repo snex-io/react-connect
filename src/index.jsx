@@ -30,6 +30,7 @@ class SNEXConnect extends Component {
     };
 
     this.activate = this.activate.bind(this);
+    this.sleep = this.sleep.bind(this);
   }
 
   activate() {
@@ -47,7 +48,7 @@ class SNEXConnect extends Component {
       this.session = SNEX.createSession();
       this.session.then(session => {
         session.on("connection", this.props.onConnection);
-        session.on("disconnected", () => this.sleep());
+        session.on("disconnected", this.sleep);
       });
     }
 
