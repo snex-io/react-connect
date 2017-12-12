@@ -28,6 +28,8 @@ class SNEXConnect extends Component {
     this.state = {
       busy: false,
     };
+
+    this.activate = this.activate.bind(this);
   }
 
   activate() {
@@ -87,7 +89,7 @@ class SNEXConnect extends Component {
 
     return (
       <div
-        className="snex-connect"
+        className="snex-react-connect"
         style={{
           height: "5em",
           position: "relative",
@@ -118,7 +120,7 @@ class SNEXConnect extends Component {
               transition: "opacity 0.3s ease",
               width: "100%",
             }}
-            onClick={() => this.activate()}
+            onClick={this.activate}
           />
           <div
             className="throbber"
