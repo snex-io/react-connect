@@ -68,11 +68,7 @@ class SNEXConnect extends Component {
         const timeout = (link.lifeTime - GRACE) * MILLIS;
         console.info(`SNEX link timeout in ${timeout}ms`);
 
-        this.timer = setTimeout(() => {
-          this.setState({
-            link: null,
-          });
-        }, timeout);
+        this.timer = setTimeout(this.sleep, timeout);
       });
   }
 
