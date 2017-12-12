@@ -33,6 +33,10 @@ class SNEXConnect extends Component {
     this.sleep = this.sleep.bind(this);
   }
 
+  componentWillUnmount() {
+    this.destroy();
+  }
+
   activate() {
     if (this.activating) {
       return;
@@ -72,8 +76,19 @@ class SNEXConnect extends Component {
       });
   }
 
+  destroy() {
+    clearTimeout(this.timer);
+
+    if (this.session) {
+      this.session.then(session => {
+        session.removeListener("connection", this.props.onConnection);
+        session.removeListener("disconnected", this.sleep);
+      });
+      this.session = null;
+    }
+  }
+
   sleep() {
-    this.session = null;
     this.setState({
       busy: false,
       link: null,
