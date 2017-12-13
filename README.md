@@ -8,6 +8,14 @@ The widget will keep track of link lifetime according to what the SNEX API repor
 
 For more information on the controller API refer to the [SNEX Documentation](https://github.com/snex-io/snex-web/tree/master/docs).
 
+## Examples
+
+* Minimal Example
+  https://codesandbox.io/s/31v55l51jm
+  
+* Multiple Connections
+  https://codesandbox.io/s/z3y221m534
+
 
 ## Usage
 
