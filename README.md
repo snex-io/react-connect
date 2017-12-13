@@ -16,20 +16,25 @@ For more information on the controller API refer to the [SNEX Documentation](htt
 * Multiple Connections
   https://codesandbox.io/s/z3y221m534
 
-
 ## Usage
 
-* Install.
+### [Watch Video](https://www.youtube.com/watch?v=xFt6IpxaQ-w) on YouTube.
+
+
+### Install.
 ```bash
 yarn add @snex/react-connect
 ```
 
-* Require component.
+### Require component.
 ```js
 import SNEXConnect from '@snex/react-connect';
 ```
 
-* Render.
+### Render.
+
+Wire up SNEX with the `onConnection` property to receive remotes and listen to the `data` event of remotes.
+
 ```jsx
 class MyComponent extends React.Component {
   handleConnection = (controller) => {
