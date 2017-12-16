@@ -1,10 +1,10 @@
 import React, { Component, cloneElement } from "react";
 import PropTypes from "prop-types";
 
-import logo from "./logo.svg";
-import throbber from "./throbber.svg";
+import logo from "./gfx/logo.svg";
+import throbber from "./gfx/throbber.svg";
 
-class Widget extends Component {
+export class Widget extends Component {
   static propTypes = {
     busy: PropTypes.bool,
     url: PropTypes.string,
@@ -87,5 +87,3 @@ class Widget extends Component {
     );
   }
 }
-
-export default Widget;

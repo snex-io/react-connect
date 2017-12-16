@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import PeerConnect from "../PeerConnect.jsx";
+import { PeerConnect } from "../PeerConnect.jsx";
 
 describe("PeerConnect", () => {
   let onConn;
