@@ -11,7 +11,7 @@
   },
   "scripts": {
     "autoformat": "prettier --trailing-comma es5 --write './src/**/*.{js,jsx}'",
-    "build": "babel ./src/ --out-dir ./dist",
+    "build": "babel ./src/ --ignore=__tests__ --out-dir  ./dist",
     "test": "jest"
   },
   "main": "dist/index.js",
