@@ -1,11 +1,12 @@
 import React, { Component, cloneElement } from "react";
 import PropTypes from "prop-types";
+
 import SNEX from "snex";
 
 const MILLIS = 1000;
 const GRACE = 30;
 
-class PeerConnector extends Component {
+export class PeerConnect extends Component {
   static propTypes = {
     onConnection: PropTypes.func.isRequired,
     type: PropTypes.string,
@@ -112,5 +113,3 @@ class PeerConnector extends Component {
     );
   }
 }
-
-export default PeerConnector;
