@@ -26,20 +26,21 @@ class PeerConnector extends Component {
       busy: false,
       link: null,
     };
-
-    this.activate = this.activate.bind(this);
   }
 
   componentWillUnmount() {
     this.destroy();
   }
 
-  activate() {
+  componentWillReceiveProps;
+
+  activate = () => {
     if (this.activating) {
       return;
     }
 
     this.activating = true;
+
     this.setState({
       busy: true,
       link: null,
@@ -47,10 +48,15 @@ class PeerConnector extends Component {
 
     if (!this.session) {
       this.session = SNEX.createSession();
-      this.session.then(session => {
-        session.on("connection", this.props.onConnection);
-        session.on("disconnected", this.sleep);
-      });
+      this.session
+        .then(session => {
+          session.on("connection", this.props.onConnection);
+          session.on("disconnected", this.destroy);
+        })
+        .catch(e => {
+          console.error(e);
+          this.destroy();
+        });
     }
 
     clearTimeout(this.timer);
@@ -61,6 +67,7 @@ class PeerConnector extends Component {
       })
       .then(link => {
         this.activating = false;
+
         this.setState({
           link,
           busy: false,
@@ -71,26 +78,28 @@ class PeerConnector extends Component {
 
         this.timer = setTimeout(this.sleep, timeout);
       });
-  }
+  };
 
-  destroy() {
-    clearTimeout(this.timer);
-
-    if (this.session) {
-      this.session.then(session => {
-        session.removeListener("connection", this.props.onConnection);
-        session.removeListener("disconnected", this.sleep);
-      });
-      this.session = null;
-    }
-  }
-
-  sleep() {
+  sleep = () => {
     this.setState({
       busy: false,
       link: null,
     });
-  }
+  };
+
+  destroy = () => {
+    clearTimeout(this.timer);
+
+    this.sleep();
+
+    if (this.session) {
+      this.session.then(session => {
+        session.removeListener("connection", this.props.onConnection);
+        session.removeListener("disconnected", this.destroy);
+      });
+      this.session = null;
+    }
+  };
 
   render() {
     const { busy, link } = this.state;
@@ -98,7 +107,7 @@ class PeerConnector extends Component {
 
     return (
       <div className="snex-react-connect" onClick={this.activate}>
-        { cloneElement(React.Children.only(this.props.children), {busy, url}) }
+        {cloneElement(React.Children.only(this.props.children), { busy, url })}
       </div>
     );
   }
