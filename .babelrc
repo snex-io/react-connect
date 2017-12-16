@@ -6,9 +6,6 @@
   "plugins": [
     "inline-import-data-uri",
     "transform-react-jsx",
-    "transform-class-properties",
-  ],
-  "ignore": [
-    "__tests__/"
+    "transform-class-properties"
   ]
 }
