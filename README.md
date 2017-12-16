@@ -30,7 +30,7 @@ yarn add @snex/react-connect
 
 ### Require component.
 ```js
-import SNEXConnect from '@snex/react-connect';
+import SNEX from '@snex/react-connect';
 ```
 
 ### Render.
@@ -49,7 +49,7 @@ class MyComponent extends React.Component {
 
   render() {
     return <div>
-      <SNEXConnect
+      <SNEX
         type='nes'
         onConnection={this.handleConnection}
       />
@@ -62,7 +62,7 @@ class MyComponent extends React.Component {
 ### `onConnection` *Function* (required)
 Function to call everytime a controller is connected. The function will have the connecting controller as argument. To listen for input from controller attach a listener to the `data` event.
 ```jsx
-<SNEXConnect onConnection={controller => {
+<SNEX onConnection={controller => {
     controller.on('data', data => {
         console.log('Controller sent', data);
     });
