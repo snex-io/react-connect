@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PeerConnect busy flag "false" and url "null" propagated by default 1`] = `
+<div
+  className="snex-react-connect"
+  onClick={[Function]}
+>
+  <div
+    busy={false}
+    url={null}
+  />
+</div>
+`;
