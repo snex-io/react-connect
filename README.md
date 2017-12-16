@@ -1,6 +1,11 @@
-# SNEX Connect React Widget
+# SNEX React Widget
 
 A React widget for connecting SNEX gamepads. 
+
+[Watch an intro to SNEX](https://www.youtube.com/watch?v=M0Zpn2V_xac "JS Gamepad API over Air")
+
+
+
 
 When this widget exist in your application any user can control your application on with their phone by clicking the widget and going to the URL shown.
 
