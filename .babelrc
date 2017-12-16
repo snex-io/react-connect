@@ -8,4 +8,7 @@
     "transform-react-jsx",
     "transform-class-properties",
   ],
+  "ignore": [
+    "__tests__/"
+  ]
 }
