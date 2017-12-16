@@ -46,7 +46,6 @@ class Widget extends Component {
               transition: "opacity 0.3s ease",
               width: "100%",
             }}
-            onClick={this.activate}
           />
           <div
             className="throbber"

@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 
 import SNEX from "snex";
 
-import PeerConnector from "./PeerConnector";
+import PeerConnect from "./PeerConnect";
 import Widget from "./Widget";
 
-class SNEXConnect extends Component {
+export { PeerConnect };
+
+export default class SNEXConnect extends Component {
   static propTypes = {
     onConnection: PropTypes.func.isRequired,
     type: PropTypes.string,
@@ -14,14 +16,12 @@ class SNEXConnect extends Component {
 
   render() {
     return (
-      <PeerConnector
+      <PeerConnect
         onConnection={this.props.onConnection}
         type={this.props.type}
       >
-        <Widget/>
-      </PeerConnector>
+        <Widget />
+      </PeerConnect>
     );
   }
 }
-
-export default SNEXConnect;
