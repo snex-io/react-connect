@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import { Widget } from "../Widget.jsx";
+import { Widget } from "../Widget";
 
 it("renders logo face when given nothing", () => {
   const tree = renderer.create(<Widget />).toJSON();

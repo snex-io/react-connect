@@ -1,9 +1,9 @@
 import React from "react";
 
-import { SNEXConnect as SNEXConnectSRC } from "../SNEXConnect.jsx";
-import { PeerConnect as PeerConnectSRC } from "../PeerConnect.jsx";
+import { SNEXConnect as SNEXConnectSRC } from "../SNEXConnect";
+import { PeerConnect as PeerConnectSRC } from "../PeerConnect";
 
-import SNEX, { PeerConnect } from "../index.js";
+import SNEX, { PeerConnect } from "../";
 
 it("exports complete widget", () => {
   expect(SNEX).toBe(SNEXConnectSRC);
