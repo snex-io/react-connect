@@ -7,7 +7,7 @@ A React widget for connecting SNEX gamepads.
 
 
 
-When this widget exist in your application any user can control your application on with their phone by clicking the widget and going to the URL shown.
+When this widget exist in your application any user can connect to your web app with a gamepad by going to the URL shown.
 
 The widget will keep track of link lifetime according to what the SNEX API reports. After the link expires the widget will go back to showing the SNEX logo and a new session can be requested by clicking again.
 
