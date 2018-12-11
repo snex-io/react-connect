@@ -75,4 +75,4 @@ Function to call everytime a controller is connected. The function will have the
 ```
 
 ### `type` *String* (optional)
-Controller type to create URL for like `nes`, `snes`, or `genesis`. Default to `nes`. For a full list of controllers refer to the [SNEX Documentation](https://github.com/snex-io/snex-web/tree/master/docs).
+Controller type to create URL for like `nes`, `snes`, or `genesis`. Default to `nes`. For a full list of controllers refer to the [SNEX Documentation](https://docs.snex.io/).
