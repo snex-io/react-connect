@@ -32,8 +32,6 @@ export class PeerConnect extends Component {
     this.destroy();
   }
 
-  componentWillReceiveProps;
-
   activate = () => {
     if (this.activating) {
       return;
