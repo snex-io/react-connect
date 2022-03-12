@@ -17,7 +17,7 @@
   "main": "dist/index.js",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "snex": "^0.3"
+    "snex": "^0.5.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
