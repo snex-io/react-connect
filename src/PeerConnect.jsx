@@ -1,7 +1,6 @@
 import React, { Component, cloneElement } from "react";
 import PropTypes from "prop-types";
-
-import SNEX from "snex";
+import * as snex from "snex";
 
 const MILLIS = 1000;
 const GRACE = 30;
@@ -48,7 +47,7 @@ export class PeerConnect extends Component {
     });
 
     if (!this.session) {
-      this.session = SNEX.createSession();
+      this.session = snex.createSession();
       this.session
         .then(session => {
           session.on("connection", this.props.onConnection);
